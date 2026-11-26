@@ -201,20 +201,8 @@ footer {
   margin-bottom: 0;
 }
 
-.intro-head .kicker::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  margin: 0.9rem auto 0;
-  background: var(--accent);
-}
-
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 1.25rem 1.75rem;
-  align-items: start;
+  display: block;
 }
 
 h1 {
@@ -223,14 +211,20 @@ h1 {
   letter-spacing: -0.03em;
 }
 
+.hero-copy {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .hero-copy h2 {
   margin: 0 0 1rem;
-  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-size: clamp(2.2rem, 4vw, 3rem);
 }
 
 .hero-copy p {
-  margin: 0;
-  max-width: 38rem;
+  margin: 0 auto;
+  max-width: none;
   color: var(--muted);
   font-size: 1.02rem;
 }
