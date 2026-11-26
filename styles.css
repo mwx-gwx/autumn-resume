@@ -117,7 +117,7 @@ h1 {
   margin: 0;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: calc(clamp(72px, 8vw, 112px) - 4pt);
+  font-size: calc(clamp(72px, 8vw, 112px) - 4pt - 8pt);
   line-height: 0.9;
   letter-spacing: -0.03em;
 }
@@ -199,7 +199,7 @@ footer h2 {
 .section-head h2,
 #tools h2 {
   margin: 0 0 40px;
-  font-size: calc(clamp(40px, 5vw, 64px) - 3pt - 4pt);
+  font-size: calc(clamp(40px, 5vw, 64px) - 3pt - 4pt - 8pt);
   line-height: 1.05;
   max-width: none;
   white-space: nowrap;
@@ -460,10 +460,10 @@ footer h2 {
   }
   .meta-row, .footer-bar, .section-head { display: flex; flex-direction: column; align-items: flex-start; }
   .aside { text-align: left; margin-bottom: 8px; }
-  h1 { font-size: calc(68px - 4pt); }
+  h1 { font-size: calc(68px - 4pt - 8pt); }
   .stats { margin-top: 40px; }
   .display, .section-head h2, #tools h2 {
-    font-size: calc(40px - 3pt - 4pt);
+    font-size: calc(40px - 3pt - 4pt - 8pt);
     white-space: normal;
   }
 }
