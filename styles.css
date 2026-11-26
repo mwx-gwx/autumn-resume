@@ -123,6 +123,8 @@ p, li { text-wrap: pretty; }
 .nav-links a:hover::after,
 .nav-links a.active::after { width: 100%; }
 
+.nav-links:hover a.active:not(:hover)::after { width: 0; }
+
 .header-actions {
   justify-self: end;
   display: flex;
@@ -199,7 +201,7 @@ footer {
 .meta-row p { margin: 0; }
 
 .intro-head {
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.45rem;
 }
 
 .intro-head .kicker {
