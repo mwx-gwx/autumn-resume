@@ -196,8 +196,8 @@ footer {
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
-  gap: 3rem;
-  align-items: end;
+  gap: 1.25rem 1.75rem;
+  align-items: start;
 }
 
 h1 {
