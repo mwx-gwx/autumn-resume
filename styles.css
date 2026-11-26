@@ -163,6 +163,11 @@ p, li { text-wrap: pretty; }
 
 main { padding-top: 100px; }
 
+section[id],
+footer[id] {
+  scroll-margin-top: 100px;
+}
+
 .hero,
 .band,
 footer {
@@ -218,8 +223,17 @@ h1 {
 }
 
 .hero-copy h2 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.9rem;
   font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.hero-copy h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 0.9rem auto 0;
+  background: var(--accent);
 }
 
 .hero-copy p {
