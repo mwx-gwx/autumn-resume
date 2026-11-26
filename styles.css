@@ -206,7 +206,7 @@ footer h2 {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  gap: 32px;
+  gap: 28px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
