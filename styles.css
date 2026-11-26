@@ -142,7 +142,7 @@ h1 {
 .hero-copy h2,
 .section-head h2,
 .display,
-.tools h2,
+#tools h2,
 footer h2 {
   font-family: var(--serif);
   font-weight: 400;
@@ -194,7 +194,7 @@ footer h2 {
 
 .display,
 .section-head h2,
-.tools h2 {
+#tools h2 {
   margin: 0 0 40px;
   font-size: clamp(40px, 5vw, 64px);
   line-height: 1.05;
@@ -321,17 +321,22 @@ footer h2 {
   padding-top: 16px;
 }
 
-.tools { padding-bottom: 88px; }
+#tools { padding-bottom: 88px; }
+
+.tools-block {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .tools-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr 0.9fr;
+  grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: start;
-  max-width: 1200px;
 }
 
-.tools h2 { margin-bottom: 0; }
+#tools h2 { margin-bottom: 36px; }
 
 .plain {
   list-style: none;
@@ -448,5 +453,5 @@ footer h2 {
   .aside { text-align: left; margin-bottom: 8px; }
   h1 { font-size: 68px; }
   .stats { margin-top: 40px; }
-  .display, .section-head h2, .tools h2 { font-size: 40px; }
+  .display, .section-head h2, #tools h2 { font-size: 40px; }
 }
