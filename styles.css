@@ -117,7 +117,7 @@ h1 {
   margin: 0;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: calc(clamp(72px, 8vw, 112px) - 4pt - 8pt);
+  font-size: 68px;
   line-height: 0.9;
   letter-spacing: -0.03em;
 }
@@ -199,7 +199,7 @@ footer h2 {
 .section-head h2,
 #tools h2 {
   margin: 0 0 40px;
-  font-size: calc(clamp(40px, 5vw, 64px) - 3pt - 4pt - 8pt);
+  font-size: 36px;
   line-height: 1.05;
   max-width: none;
   white-space: nowrap;
