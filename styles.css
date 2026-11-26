@@ -296,31 +296,73 @@ footer h2::after {
   line-height: 1.35;
 }
 
-.org { margin: 1.75rem 0 1.5rem; }
-
-.org h3,
-.roles h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1.45rem;
+#experience .experience-intro {
+  text-align: center;
 }
+
+.org-name {
+  margin: 0 0 0.9rem;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.section-rule {
+  width: 60px;
+  height: 2px;
+  margin: 0 auto 2.75rem;
+  background: var(--accent);
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.timeline article {
+  position: relative;
+  margin-bottom: 2.75rem;
+}
+
+.timeline article::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: -2.75rem;
+  left: calc(-2.5rem + 4px);
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline article:last-child { margin-bottom: 0; }
+.timeline article:last-child::before { display: none; }
+
+.timeline-marker {
+  position: absolute;
+  top: 8px;
+  left: -2.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+}
+
+.timeline .dates { margin-bottom: 0.55rem; }
+
+.timeline ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.timeline li + li { margin-top: 0.45rem; }
 
 .org-sub { margin: 0.4rem 0; font-weight: 600; }
-
-.org-meta,
-.dept,
-.muted { margin: 0; color: var(--muted); }
-
-.roles {
-  max-width: 42rem;
-  margin-left: max(0px, calc((100% - 1200px) / 2));
-  margin-right: 0;
-}
-
-.roles article + article {
-  margin-top: 1.75rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-}
 
 .dates,
 .label,
@@ -333,15 +375,11 @@ footer h2::after {
   color: var(--accent);
 }
 
-.dept { margin-bottom: 0.75rem; }
-
-.roles ul {
-  margin: 0.75rem 0 0;
-  padding-left: 1.1rem;
+.dept,
+.muted {
+  margin: 0 0 0.75rem;
   color: var(--muted);
 }
-
-.roles li + li { margin-top: 0.45rem; }
 
 .tools-grid {
   display: grid;
@@ -448,5 +486,4 @@ footer {
   .display,
   #tools h2,
   footer h2 { font-size: 1.85rem; }
-  .roles { margin-left: 0; max-width: none; }
 }
