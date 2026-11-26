@@ -7,8 +7,8 @@
   --footer: #294137;
   --cream: #f3f1ea;
   --max: 1120px;
-  --serif: "Instrument Serif", "Iowan Old Style", Palatino, Georgia, serif;
-  --sans: "Instrument Sans", "Avenir Next", "Segoe UI", sans-serif;
+  --serif: "Lora", Georgia, serif;
+  --sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 }
 
 * { box-sizing: border-box; }
