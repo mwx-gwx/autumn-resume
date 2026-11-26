@@ -253,11 +253,19 @@ footer h2 {
   line-height: 1.25;
 }
 
-.split {
-  display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
-  gap: 48px;
+.experience-intro,
+.roles {
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-intro .display {
+  margin-bottom: 28px;
+}
+
+.org {
+  margin-bottom: 40px;
 }
 
 .org h3,
@@ -427,7 +435,6 @@ footer h2 {
   .hero-grid,
   .stats,
   .cards,
-  .split,
   .two,
   .tools-grid,
   .contact-grid,
