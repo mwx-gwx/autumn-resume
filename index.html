@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Autumn Arroyo — Clinical Operations</title>
   <meta name="description" content="Autumn Arroyo, Senior Clinical Operations and Reproductive Health Coordinator in New York.">
+  <script>
+    try {
+      var savedTheme = localStorage.getItem("resume-theme");
+      document.documentElement.setAttribute("data-theme", savedTheme === "light" ? "light" : "dark");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,14 +20,35 @@
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="#top">Autumn Arroyo</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <a class="brand" href="#top">
+      <span class="logo-text">Autumn Arroyo</span>
+      <span class="logo-sub">Senior Clinical Operations and Reproductive Health Coordinator</span>
+    </a>
     <nav id="site-nav" class="nav-links">
       <a href="#expertise">Expertise</a>
       <a href="#experience">Experience</a>
       <a href="#tools">Tools &amp; Languages</a>
       <a href="#contact">Get in touch</a>
     </nav>
+    <div class="header-actions">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <button id="theme-toggle" class="theme-btn" type="button" aria-label="Toggle light and dark theme">
+        <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+    </div>
   </header>
 
   <main id="top">
@@ -183,6 +212,28 @@
         nav.classList.remove("open");
         toggle.setAttribute("aria-expanded", "false");
       });
+    });
+
+    const sections = [...nav.querySelectorAll("a")].map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+    const setActive = (id) => {
+      nav.querySelectorAll("a").forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+      });
+    };
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      }, { rootMargin: "-45% 0px -45% 0px" });
+      sections.forEach((section) => observer.observe(section));
+    }
+
+    const themeButton = document.querySelector("#theme-toggle");
+    themeButton.addEventListener("click", () => {
+      const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("resume-theme", next); } catch (e) {}
     });
   </script>
 </body>
