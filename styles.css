@@ -191,28 +191,38 @@ footer h2::after {
   padding: 0;
   max-width: var(--max);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .cards li {
-  border-top: 1px solid var(--border);
-  padding: 1.15rem 1.25rem 1.25rem 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2.2rem 1.6rem;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s, box-shadow 0.4s;
+}
+
+.cards li:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .cards span {
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.85rem;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   color: var(--accent);
 }
 
-.cards p {
+.cards h3 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.35rem;
+  font-weight: 700;
   line-height: 1.35;
 }
 
