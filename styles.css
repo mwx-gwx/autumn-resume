@@ -173,7 +173,7 @@ footer {
 .hero {
   max-width: var(--max);
   margin: 0 auto;
-  padding-top: 4.5rem;
+  padding-top: 2.25rem;
   padding-bottom: 3.5rem;
 }
 
@@ -192,6 +192,23 @@ footer {
 }
 
 .meta-row p { margin: 0; }
+
+.intro-head {
+  margin-bottom: 1.15rem;
+}
+
+.intro-head .kicker {
+  margin-bottom: 0;
+}
+
+.intro-head .kicker::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 0.9rem auto 0;
+  background: var(--accent);
+}
 
 .hero-grid {
   display: grid;
