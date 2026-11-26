@@ -196,9 +196,10 @@ footer h2 {
 .section-head h2,
 #tools h2 {
   margin: 0 0 40px;
-  font-size: clamp(40px, 5vw, 64px);
+  font-size: calc(clamp(40px, 5vw, 64px) - 3pt);
   line-height: 1.05;
-  max-width: 16ch;
+  max-width: none;
+  white-space: nowrap;
 }
 
 .section-head {
@@ -453,5 +454,8 @@ footer h2 {
   .aside { text-align: left; margin-bottom: 8px; }
   h1 { font-size: 68px; }
   .stats { margin-top: 40px; }
-  .display, .section-head h2, #tools h2 { font-size: 40px; }
+  .display, .section-head h2, #tools h2 {
+    font-size: calc(40px - 3pt);
+    white-space: normal;
+  }
 }
