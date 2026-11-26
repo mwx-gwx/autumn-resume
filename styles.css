@@ -235,23 +235,28 @@ h1 {
   margin-right: auto;
 }
 
-.section-head h2,
-.display,
+.section-head,
+.tools-block > .kicker,
 #tools h2,
-footer h2 {
-  margin: 0 0 0.85rem;
-  font-size: 2.2rem;
+.contact-head {
+  text-align: center;
+}
+
+.section-head h2,
+#tools h2,
+.contact-head h2 {
+  margin: 0 0 0.9rem;
+  font-size: clamp(2.2rem, 4vw, 3rem);
 }
 
 .section-head h2::after,
-.display::after,
 #tools h2::after,
-footer h2::after {
+.contact-head h2::after {
   content: "";
   display: block;
   width: 60px;
   height: 2px;
-  margin-top: 0.9rem;
+  margin: 0.9rem auto 0;
   background: var(--accent);
 }
 
@@ -400,16 +405,18 @@ footer {
   padding-bottom: 1.75rem;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: end;
-  margin-bottom: 3rem;
+.contact-head,
+.contact-details,
+.footer-bar {
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.contact-head { margin-bottom: 2rem; }
+
 .contact-note {
-  margin: 0.5rem 0 0;
+  margin: 1rem 0 0;
   color: var(--muted);
   font-size: 1.05rem;
 }
@@ -418,7 +425,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
   gap: 0.7rem;
+  margin-bottom: 3rem;
 }
 
 .email,
@@ -473,7 +482,7 @@ footer {
   main { padding-top: 72px; }
   .hero-grid,
   .tools-grid,
-  .contact-grid,
+  .contact-details,
   .meta-row,
   .footer-bar {
     display: flex;
@@ -485,5 +494,6 @@ footer {
   .section-head h2,
   .display,
   #tools h2,
+  .contact-head h2,
   footer h2 { font-size: 1.85rem; }
 }
