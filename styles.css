@@ -263,7 +263,7 @@ h1 {
 #tools h2,
 .contact-head h2 {
   margin: 0 0 0.9rem;
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: 30px;
 }
 
 .section-head h2::after,
@@ -313,7 +313,7 @@ h1 {
 .cards h3 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.35;
 }
@@ -324,7 +324,7 @@ h1 {
 
 .org-name {
   margin: 0 0 0.9rem;
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: 30px;
 }
 
 .section-rule {
