@@ -206,6 +206,7 @@ footer h2 {
   justify-content: space-between;
   align-items: end;
   gap: 32px;
+  max-width: 1200px;
 }
 
 .section-head h2 { margin-bottom: 36px; }
@@ -222,8 +223,9 @@ footer h2 {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px 32px;
+  max-width: 1200px;
 }
 
 .cards li {
