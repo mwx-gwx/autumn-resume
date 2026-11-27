@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Autumn Arroyo — Clinical Operations</title>
+  <title>Autumn Arroyo</title>
   <meta name="description" content="Autumn Arroyo, Clinical Operations and Reproductive Health Coordinator in New York.">
   <script>
     try {
@@ -62,6 +62,7 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <h2>Autumn Arroyo</h2>
+          <p class="availability"><span class="availability-dot" aria-hidden="true"></span>Open to new roles</p>
           <p>
             Clinical Operations and Reproductive Health Coordinator with specialized experience directing third-party reproduction programs, donor screening, and specialized patient coordination. Adept at managing FDA and New York State regulatory compliance, high-volume clinic administration, and cross-functional team workflows.
           </p>
@@ -194,6 +195,14 @@
     </div>
   </footer> -->
   <script>
+    const themeButton = document.querySelector("#theme-toggle");
+    themeButton.addEventListener("click", () => {
+      const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", next);
+      themeButton.setAttribute("aria-pressed", next === "light" ? "true" : "false");
+      try { localStorage.setItem("resume-theme", next); } catch (e) {}
+    });
+
     const toggle = document.querySelector(".nav-toggle");
     const nav = document.querySelector(".nav-links");
     toggle.addEventListener("click", () => {
@@ -207,7 +216,7 @@
       });
     });
 
-    const sections = [...nav.querySelectorAll("a")].map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+    const sections = [...nav.querySelectorAll('a[href^="#"]')].map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
     const setActive = (id) => {
       nav.querySelectorAll("a").forEach((link) => {
         link.classList.toggle("active", link.getAttribute("href") === "#" + id);
@@ -221,13 +230,6 @@
       }, { rootMargin: "-45% 0px -45% 0px" });
       sections.forEach((section) => observer.observe(section));
     }
-
-    const themeButton = document.querySelector("#theme-toggle");
-    themeButton.addEventListener("click", () => {
-      const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
-      document.documentElement.setAttribute("data-theme", next);
-      try { localStorage.setItem("resume-theme", next); } catch (e) {}
-    });
   </script>
 </body>
 </html>
